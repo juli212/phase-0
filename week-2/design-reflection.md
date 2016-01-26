@@ -1,6 +1,6 @@
 #  Design  Reflection  :)
 
-![You should be seeing my site map...](/img/site-map.png "My Site Map")
+![You should be seeing my site map...](/imgs/site-map.png "My Site Map")
 
 What are the 6 Phases of Web Design?
 
