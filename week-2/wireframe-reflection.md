@@ -10,6 +10,8 @@ A wireframe is a blueprint of sorts that shows a detailed design of what a web p
 What are the benefits of wireframing?
 
 
+Wireframing is very important for organizing your webpages an helping to work out the kinks of a design. Having a detailed visual helps you imagine what your site will actually look like and how user-friendly it will really be. Once you have the beginnings of a wireframe, it is easy to tell which of your design ideas need to be re-worked or changed. It is difficult to accurately assess how well a design will function without a visual representation of it. This way, you can also show a client what their website will look like and receive feedback from them so that when you progress with the development, they are not disappointed or unhappy with the results. 
+
 Did you enjoy wireframing your site?
 
 
