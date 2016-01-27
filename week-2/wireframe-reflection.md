@@ -36,8 +36,8 @@ Which parts of the challenge did you enjoy and which parts did you find tedious?
 I enjoyed designing my website and blog, it was fun to do something visual. It was tediuos to transfer my sketch to an imaage on the computer. Next time I will either do a neater sketch or design straight on the computer, if I am designing such simple pagse. If they become more complex, I will probably sketch on paper and then make an image on the computer afterwards.
 
 ### Home Wireframe
-![Wireframe Index](/week-2/imgs/wireframe-index.JPG "My Wireframe")
+![Wireframe Index](/week-2/imgs/wireframe-index.jpg "My Wireframe")
 
 
 ### Blog Home Wireframe
-![Wireframe Blog Index](/week-2/imgs/wireframe-blog-index.JPG "My Blog Wireframe")
+![Wireframe Blog Index](/week-2/imgs/wireframe-blog-index.jpg "My Blog Wireframe")
