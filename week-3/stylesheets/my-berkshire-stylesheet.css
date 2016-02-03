@@ -1,0 +1,75 @@
+body {
+	color: #000080; background-color: #ffffff; 
+}
+header {
+	text-align: center;
+}
+
+h4 {
+	margin: 0px;
+}
+
+header img {
+	height: 100px; width: 140px;
+}
+
+p {
+	display: inline-block; font-weight: bold; margin: 0px;
+}
+
+p::first-letter {
+  font-size: 200%; font-weight: bold;
+}
+
+a {
+	color: #800080; font-size: 16px;
+}
+
+a: visited {
+	color: #ff0000;
+}
+
+table {
+	font-size: 75%;
+}
+
+li {
+	padding: 15px;
+}
+.horizontal {
+	border-top: 1px solid black; margin: 10px 0px;
+}
+
+.geico {
+	width: 500px; font-weight: normal; margin: auto; text-align: center;
+}
+
+.geico section {
+	font-weight: normal; font-size: 10px; margin: 0px 0px 5px;
+}
+.geico a {
+	font-size: 10px;
+}
+.geico img {
+	margin-bottom: -5px;
+}
+.one {
+	font-size: 13px;
+}
+
+/*
+What is important to know when linking an external file (like a stylesheet) to an HTML file?
+Put the link in the head section. Make sure you know the location of the css sheet and the link has the correct path.
+
+What tricks did you use to help you with positioning? How hard was it to get the site as you wanted it?
+I just tried various things to see which worked and which did not. Experimenting is also the best way to understand how CSS works. It was not too difficult to get the Berkshire site how I wanted it but it is a very basic site and was not too complicated to replicate. We did discuss whether we should make lists or a table to get the links positioned but we ended up using lists inside a table.
+
+What CSS did you use to modify the element style (like size, color, etc.)
+We used font-size, font-weight, color, border. text-align, and the first-letter selector.
+
+Did you modify the HTML to include classes or ids? If so, which did you choose and why? If you didn't, how would you know which one to add to your HTML?
+We added a couple of classes. I generally would use classes because they can be used more that once per page while ids can only be used once. The class was most helpful when we made a horizontal line with an empty div that had just a top border on it.
+
+When you compared your site to the actual code base, which do you think had cleaner code that followed best practices and why?
+Overall, I like the original code base better because it has each link in an individual td but my pair and I decided not to do that. The table in the original does have some style in the html tags which I do not think is good, I would remove it and add the style to the CSS instead. I also think my code is simpler right now just because it has a lot less text in it which makes it better but our final result does not quite havee the same appearance as the original so we would have to add a bit more to our html and css in order to make it exactly the same.
+*/
