@@ -29,6 +29,8 @@ How do you run an RSpec file from the command line?
 
 What was confusing about this material? What made sense?
 	I kept overthinking my code and adding too much. Everything was so simple that when I ran the code with rspec and got no errors, I always thought my code was missing someething until I tested it. The most difficult thing for me was interpreting error messages and finding solutions (which usually just involved deleting a piece of my code).	
-URL for 4.3.1:
-URL for 4.3.2: 
+
+URL for 4.3.1: https://github.com/juli212/phase-0/blob/master/week-4/address/my_solution.rb
+URL for 4.3.2: https://github.com/juli212/phase-0/blob/master/week-4/math/my_solution.rb
+
 =end
