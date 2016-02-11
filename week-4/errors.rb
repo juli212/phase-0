@@ -10,10 +10,10 @@
 # This error was analyzed in the README file.
 # --- error -------------------------------------------------------
 
-def cartman_hates(thing)
-  while true
-    puts "What's there to hate about #{thing}?"
-end
+#def cartman_hates(thing)
+#  while true
+#    puts "What's there to hate about #{thing}?"
+#end
 
 # This is a tricky error. The line number may throw you off.
 
@@ -28,7 +28,7 @@ end
 # 5. Where is the error in the code?
 # Right at the beginning of the string 'Screw you guys'
 # 6. Why did the interpreter give you this error?
-#
+# Line should have been: cartmans_phrase = "Screw you guys " + "I'm going home."
 
 # --- error -------------------------------------------------------
 
@@ -170,7 +170,7 @@ end
 # Write your reflection below as a comment.
 =begin
 Which error was the most difficult to read?
-	At first, it was difficult to interpret the ArgumentError because I was not sure which order the (1 for 2) or (2 for 1) was interpreted but after seeing a number of them, it is starting to make more sense!
+	The first one was most difficult for me at first (I am still not totally sure about it) but maybe that is because it is so simple. I also had trouble interpreting the ArgumentError because I was not sure which order the (1 for 2) or (2 for 1) was interpreted but after seeing a number of them, it is starting to make more sense!
 
 How did you figure out what the issue with the error was?
 	The names of the errors were pretty explanitory once you looked at them closely and revisited the code.
@@ -180,4 +180,4 @@ Were you able to determine why each error message happened based on the code?
 
 When you encounter errors in your future code, what process will you follow to help you debug?	
 	I will read the error closely and find the line number in order to examine where the error might be. I will also read the error name and make sure I understand what it means. If not, I will probably google it in order to find a definition unless I found a typo or something easy to fix in my code.
-=end
+=end 
