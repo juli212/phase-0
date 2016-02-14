@@ -13,7 +13,10 @@
 # Output: sum of array of numbers
 # Steps to solve the problem.
 =begin
-for each number +number.next
+define a variable called sum for the sum. 
+start sum at 0.
+take each object in array and add it to sum
+return sum
 
 =end
 # 1. total initial solution
@@ -53,6 +56,13 @@ end
 # make sure all pseudocode is commented out!
 # Input: Array of strings
 # Output: strings joined into 1 string
+=begin 
+take each string in array,
+add spaces between each and turn into one long string
+capitalize
+return with period added to the end.
+
+=end
 # Steps to solve the problem.
 
 
