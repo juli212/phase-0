@@ -13,12 +13,15 @@
 # What is the output? (i.e. What should the code return?)
 # A positive integer with comma separation
 # What are the steps needed to solve the problem?
-# if integer < 0, return nil
-# else if integer < 100, return integer turned into a string
-# else add a comma every three characters, starting with last character:
+# IF integer is GREATER THAN 0, return nil
+# or IF integer is LESS THAN 100, return integer turned into a string
+# ELSE, add a comma every three characters, starting with last character:
 	# separate integer into array of single digits
-	# comebine every 3 characters into string.
-	# add , between each.
+	# Reverse array
+	# Insert comma as 4th object
+	# Continue to add comma as every 4th object in the array
+	# UNTIL one of the last 4 objects is a comma
+	# End
 	# recombine into one string.
 
 # this was like half way between my pseudocode and my code...
@@ -32,6 +35,7 @@
 #return string
 
 # 1. Initial Solution
+#=begin
 def separate_comma(integer)
 	if integer < 0
 		return nil
@@ -48,12 +52,23 @@ def separate_comma(integer)
 	end
 end
 
-separate_comma(362436384)
-
+p separate_comma(36243638445)
+#=end
 
 # 2. Refactored Solution
 
+# Honestly could not find a way to refactor this without making it more complicated...or using regular expressions. I know there are other ways to do similar things like split the string of integers into groups of 3, then join them into an array with commas but that did not seem any simpler than what my code does. So my solution below involves regex's and is obviously simpler than my original code...
 
+def separate_comma(integer)
+	if integer < 0
+		return nil
+	elsif integer < 1000
+		return integer.to_s
+	else
+		array = integer.to_s.reverse.scan /.{1,3}/
+	end
+		return array.join(',').reverse
+end
 
 
 # 3. Reflection
@@ -67,7 +82,7 @@ Was your pseudocode effective in helping you build a successful initial solution
 	Yes. It helped me organize my thoughts and keep me on track when I got distracted looking things up that I forgot from the books. It also allowed me to think of things in smaller steps. Once I had "add a comma every three characters" I realized that it was not detailed enough and I procedded to dissect that concept until it became four or five separate steps.
 
 What new Ruby method(s) did you use when refactoring your solution? Describe your experience of using the Ruby documentation to implement it/them (any difficulties, etc.). Did it/they significantly change the way your code works? If so, how?
-
+	My refactored code works kind of differently now but I also used regex's so I am not sure if that counts... In my refactored code, I used .scan to break up the string of numbers into strings of 3 which I put into an array. Then joined them back together with a comma separating each string of 3 numbers. But again, would not have known how to do this without regex. Nothing else that I found in Ruby docs would have made this any easier otherwise.
 
 How did you initially iterate through the data structure?
 	I turned the integer into an array with each character a separate string object inside the array. Then I reversed the array to add commas until one of the last 4 objects was a comma. I inserted commas starting at the 4th object array[3] and then increased that index number by 4 until the condition for the loop is met. Then join the array so that it becomes a string and print it in reverse (double reverse = non-reversed).
