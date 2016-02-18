@@ -86,6 +86,7 @@ What new Ruby method(s) did you use when refactoring your solution? Describe you
 
 How did you initially iterate through the data structure?
 	I turned the integer into an array with each character a separate string object inside the array. Then I reversed the array to add commas until one of the last 4 objects was a comma. I inserted commas starting at the 4th object array[3] and then increased that index number by 4 until the condition for the loop is met. Then join the array so that it becomes a string and print it in reverse (double reverse = non-reversed).
+	
 Do you feel your refactored solution is more readable than your initial solution? Why?
-
+	Yes. Having one line of code is much simpler than my original solution and .split is pretty understandable, even to me! And I am really not familiar with regex's but it still makes perfect sense when I look at it. Despite this, I know we were not supposed to use regex's in our assignment and I do not think I could have found a refactored solution that was more readable than my initial solution without the regex's. I think my initial solution is pretty easy to follow and understand.
 =end
