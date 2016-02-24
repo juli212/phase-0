@@ -8,9 +8,6 @@
 
 def serving_size_calc(item_to_make, num_of_ingredients)
   library = {"cookie" => 1, "cake" =>  5, "pie" => 7}
-  
-
-  
   # defining a method that takes 2 arguments and compares them to an existing hash library
 # error counter = 3
   
@@ -22,10 +19,10 @@ def serving_size_calc(item_to_make, num_of_ingredients)
   remaining_ingredients = num_of_ingredients % serving_size
   suggested_portion = num_of_ingredients / serving_size
   suggested_item = []
+
   if remaining_ingredients > 0
     library.each { |key, value| suggested_item.push(key) if value <= remaining_ingredients}
   end
-
   
   #key(remaining_ingredients)
 # when the remaining ingredients are equal to zero, the method returns the amount to make.
@@ -40,10 +37,6 @@ def serving_size_calc(item_to_make, num_of_ingredients)
   end
 end
 
-
-
-
-
 p serving_size_calc("pie", 7)
 p serving_size_calc("pie", 83)
 p serving_size_calc("cake", 5)
@@ -57,7 +50,14 @@ p serving_size_calc("cookie", 10)
 #  Reflection
 =begin
 What did you learn about making code readable by working on this challenge?
+  Having good comments and including spacing between methods and pieces of code really help make the code more understandable.
+
 Did you learn any new methods? What did you learn about them?
+  I learned about the .has_key?() method which returs true if a hash has a key equal to whatever is in the (). There is also the equivilant .has_value() which returns true if the value equals whatever is in the ().
+
 What did you learn about accessing data in hashes? 
+  We can access the key or value in a key/value pair using its key and iterating through each pair of key/values and then you can add the key or value to a new array if certain conditions are met.
+
 What concepts were solidified when working through this challenge?
+  I learned more about ArgumentError syntax because we had some struggles with that. I also learned that sometimes instead of refactoring code, it makes sense to entirely rewrite some parts of code when it just does not really make sense.
 =end
