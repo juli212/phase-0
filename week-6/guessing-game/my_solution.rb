@@ -22,40 +22,56 @@
 
 # Initial Solution
 
-class GuessingGame
-  def initialize(answer)
-  	@answer = answer
-  end
+# class GuessingGame
+#   def initialize(answer)
+#     @answer = answer
+#     @solved = false
+#   end
 
-  def guess(guess)
-  	@guess = guess
-  	if guess == @answer
-  		@guess = :correct
-  	elsif guess < @answer
-  		@guess = :low
-  	elsif guess > @answer 
-  		@guess = :high
-  	end
-  	return @guess
-  end
-  
-  def solved?
-  	if @guess == :correct
-  		return true
-  	else
-  		return false
-  	end
-  end
-end
+#   def guess(guess)
+#     @guess = guess
+#     if @guess == @answer
+#       @solved = :correct
+#     elsif @guess > @answer
+#       @solved = :high
+#     elsif @guess < @answer
+#       @solved = :low
+#     end
+#   end
+
+#   def solved?
+#     if @solved == :correct
+#       true
+#     else
+#       false
+#     end
+#   end
+# end
 
 
 
 # Refactored Solution
 
+class GuessingGame
+  def initialize(answer)
+    @answer = answer
+    @solved = false
+  end
 
+  def guess(guess)
+    if guess == @answer
+      @solved = :correct
+    elsif guess > @answer
+      @solved = :high
+    elsif guess < @answer
+      @solved = :low
+    end
+  end
 
-
-
+  def solved?
+    @solved == :correct ? true : false
+  end
+end
 
 # Reflection
 =begin
