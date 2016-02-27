@@ -140,19 +140,41 @@ end
 # Refactored Solution
 
 class BingoBoard
-  attr_accessor :bingo_board, :bingo_letters
+  attr_accessor :bingo_board, :bingo_letters, :called
 
-
+  
   def initialize(board)
     @bingo_board = board
-    
+    @letters = ["B", "I", "N", "G", "O"]
   end
 
-  def bingo_call(letters)
-    @called_letter = letters.sample
-    @called_number = rand(1..100)
+  def bingo_call
+    @called_letter = @letters.sample
+    if @bingo_board = new_board
+      @called_number = rand(1..75)
+    else
+      @called_number = rand(1..100)
+    end
     @bingo_call = @called_letter + @called_number.to_s 
+    p @bingo_call
     p "The next Bingo square is #{@bingo_call}!"
+    puts
+    puts
+  end
+
+# Bonus Release:
+  def generate_board
+    new_board = Array.new(5){Array.new(5)}
+    new_board.each do |row|
+      row[0] = rand(1..15)
+      row[1] = rand(16..30)
+      row[2] = rand(31..45)
+      row[3] = rand(46..60)
+      row[4] = rand(61..75)
+    end
+    new_board[2][2] = "Fr"
+    @bingo_board = new_board
+    p @bingo_board
   end
 
   def check_number
@@ -162,44 +184,41 @@ class BingoBoard
           row[0] = " X "
         end
       end
-    end
-    if @called_letter == "I"
+    elsif @called_letter == "I"
       @bingo_board.each do |row|
         if row[1] == @called_number
           row[1] = " X "
         end
       end
-    end
-    if @called_letter == "N"
+    elsif @called_letter == "N"
       @bingo_board.each do |row|
         if row[2] == @called_number
           row[2] = " X "
         end
       end
        # map! { |dex| dex[2] == @called_number ? "x" : dex[2] }
-    end
-    if @called_letter == "G"
+    elsif @called_letter == "G"
       @bingo_board.each do |row|
         if row[3] == @called_number
           row[3] = " X "
         end
       end
-    end
-    if @called_letter == "O"
+    elsif @called_letter == "O"
       @bingo_board.each do |row|
         if row[4] == @called_number
           row[4] = " X "
         end
       end
     end
-   # p display_board
   end
 
   def display_board
-    puts "  B   I   N   G   O"
-    puts "~~~~~~~~~~~~~~~~~~~~"
+    puts "Here is your BINGO board:"
+    puts
+    puts " B    I    N    G    O"
+    puts "~~~~~~~~~~~~~~~~~~~~~~~"
     @bingo_board.each do |x|
-      p x.join("  ")
+      p x.join("   ")
     end
   end
 
