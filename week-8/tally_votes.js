@@ -1,7 +1,7 @@
 // Tally Votes in JavaScript Pairing Challenge.
 
-// I worked on this challenge with:
-// This challenge took me [#] hours.
+// I worked on this challenge with Andrew:
+// This challenge took me 2 hours.
 
 // These are the votes cast by each student. Do not alter these objects here.
 var votes = {
@@ -70,38 +70,38 @@ var officers = {
 // __________________________________________
 // Initial Solution
 
-function vote_tally(votes, voteCount) {
-  for (var voter in votes){
-    for (var position in votes[voter]) {
-      var candidate = votes[voter][position]  
-  if (candidate in voteCount[position]) {
-      voteCount[position][candidate] +=1;
-    } 
-  else {
-  voteCount[position][candidate] = 1;
-        }
-    } 
-  }
-return voteCount;
+// function vote_tally(votes, voteCount) {
+//   for (var voter in votes){
+//     for (var position in votes[voter]) {
+//       var candidate = votes[voter][position]  
+//   if (candidate in voteCount[position]) {
+//       voteCount[position][candidate] +=1;
+//     } 
+//   else {
+//   voteCount[position][candidate] = 1;
+//         }
+//     } 
+//   }
+// return voteCount;
 
-}
-vote_tally(votes, voteCount);
-console.log(voteCount);
+// }
+// vote_tally(votes, voteCount);
+// console.log(voteCount);
 
-function find_officers(officers, voteCount) {
-  for (var position in voteCount) {
-    var mostVotes = 0;
-    for (var candidate in voteCount[position]) {
-      var numVotes = voteCount[position][candidate];
-      if (numVotes > mostVotes) {
-        mostVotes = numVotes;
-        officers[position] = candidate;
-      }
-    }
-  }
-return officers;
-}
-find_officers(officers, voteCount);
+// function find_officers(officers, voteCount) {
+//   for (var position in voteCount) {
+//     var mostVotes = 0;
+//     for (var candidate in voteCount[position]) {
+//       var numVotes = voteCount[position][candidate];
+//       if (numVotes > mostVotes) {
+//         mostVotes = numVotes;
+//         officers[position] = candidate;
+//       }
+//     }
+//   }
+// return officers;
+// }
+// find_officers(officers, voteCount);
 
 
 // __________________________________________
@@ -124,7 +124,7 @@ return voteCount;
 
 }
 vote_tally(votes, voteCount);
-console.log(voteCount);
+
 
 function find_officers(officers, voteCount) {
   for (var position in voteCount) {
@@ -146,8 +146,13 @@ find_officers(officers, voteCount);
 // Reflection
 /*
 What did you learn about iterating over nested objects in JavaScript?
+  It confuses me a lot. I really miss Ruby iterations where I can use index numbers to access values much more easily... I do think that once I have more practice with nested iterating in JavaScript, it will become easier for me!
+
 Were you able to find useful methods to help you with this?
+  We did not really find new methods. We just used the for...in... loops which worked amazingly well for us!
+
 What concepts were solidified in the process of working through this challenge?
+  I definitely understand for...in... loops better now. I do not completely have a grasp on them but I can work through them and when I give them a lot of concentration, they definitely make sense. Just need more practice with them to be comfortable!
 */
 // __________________________________________
 // Test Code:  Do not alter code below this line.
