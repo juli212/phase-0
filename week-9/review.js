@@ -1,62 +1,73 @@
-// PSEUDOCODE
-// input: integer
-// output: a string saying your number is or is not a fibonacci number.
-// Define function fibonacci that takes an integer as argument
-	// IF the integer is less than 0, it is not a fib number
-	// ELSE IF the number = 0 or 1, it is a fib number
-	// ELSE IF the number squared then multiplied by 5 plus or minus 4 is a proper square root, return true, it is a fib number.
-	// ELSE return false, not a fib number
+// Grocery List Pseudocode:
 
+// New list:
+	// Define empty object groceryList
+var groceryList = {};
 
-// function fibonacci(num) {
-//   if (num < 0) {
-//     console.log("negative numbers are not fibs");
-//     return false;
-//   }
-//   else if (num == 0 || num == 1) {
-//     console.log("1 and 0 are fibs!");
-//     return true;
-//   }
-//   else if (Math.sqrt((5 * num * num) + 4) === Math.floor(Math.sqrt((5 * num * num) + 4)) ||     
-//            Math.sqrt((5 * num * num) - 4) === Math.floor(Math.sqrt((5 * num * num) - 4))) {
-//     console.log("your number is a fib!");
-//     return true;
-//   } 
-//   else
-//     console.log("sorry, your number is not a fib");
-//     return false;
-// }
+// Add item w. Quantity to list:
+	// Define function addItem that adds an item to groceryList object:	
+		// IF the item already exists in groceryList, increase the value,
+		// ELSE IF the item does not exist, add item as a property key and the quantity as the property value of the groceryList object. 
 
-// Refactor:
+function addItem(new_item, qty) {
+  groceryList[new_item] = qty;
+};
+// remove item from list:
+	// Define function removeItem that takes a string as input and delets the property that matches. If it does not match, nothing is removed.
 
-function fibonacci(num) {
-  var five_squ = 5 * num * num
-  if (num < 0) {
-    console.log("negative numbers are not fibs");
-    return false;
+function removeItem(remove_this_item) {
+  delete groceryList[remove_this_item];
+};
+// update quantity for items in list:
+	// Define function updateItem that takes an item and a quantity as arguments
+		// If the object property equals the argument item, replace the property value with the argument quantity.
+
+function updateItem(update_item, new_qty) {
+  groceryList[update_item] = new_qty;
+};
+
+//** can combine the add item and update item into one function!**
+
+//print the list:
+	// define a function printList that takes an object as an argument and prints each property of the grocerlyList object and corresponding value on one line.
+
+function printList() {
+  console.log("  GROCERY LIST");
+  console.log("~~~~~~~~~~~~~~~~");
+  for (var item in groceryList) {
+    console.log("  " + item + ": " + groceryList[item]);
   }
-  else if (Math.sqrt(five_squ + 4) === Math.floor(Math.sqrt(five_squ + 4)) ||     
-           Math.sqrt(five_squ - 4) === Math.floor(Math.sqrt(five_squ - 4))) {
-    console.log("your number is a fib!");
-    return true;
-  } 
-  else
-    console.log("sorry, your number is not a fib");
-    return false;
+};
+
+//REFACTOR:
+
+var groceryList = {};
+
+//combined my add and update functions:
+function addUpdateItem(item, qty) {
+  groceryList[item] = qty;
+};
+
+function removeItem(item) {
+  delete groceryList[item];
+};
+
+function printList() {
+  console.log("  GROCERY LIST");
+  console.log("~~~~~~~~~~~~~~~~");
+  for (var item in groceryList) {
+    console.log("  " + item + ": " + groceryList[item]);
+  }
 };
 
 // Reflect:
 /*
-What concepts did you solidify in working on this challenge?
-	I got some practice using different Math functions and making sure not to repeat unnecessary parts of code. With the formula I used, I could take out one of my else if clauses and shorten the code for better readability.
+What concepts did you solidify in working on this challenge? (reviewing the passing of information, objects, constructors, etc.)
+	Definitely a good reminder for passing information and how it differs from Ruby. In Ruby we would have needed a class to write this or we would need to set the output of each method equal to another variable that the following method could use but in JS we do not have to do that. Good general review of basic javascript objects and constructors.
 
 What was the most difficult part of this challenge?
-	Because javascript does not care much about exactness when it comes to numbers, it took me a few minutes to figure out how to check to see if the squareroot was an integer or a float.
-	I also decided to use a different formula this time just to see how the logic would be different. That was slightly challenging because The other way makes more sense to me even though I think in terms of very large numbers, this second way is better because I will not be adding ridiculously long numbers to an array.
+	I overthought it a lot at the beginning and tried to use for...in... whih was very unnecessary. Then I realized than if the property exists, you can just set it equal to a new value and it will overwrite the previous value which is very very simple.
 
-Did you solve the problem in a new way this time?
-	Yes, I used a formula I found rather than creating an array and pushing numbers to the array.
-
-Was your pseudocode different from the Ruby version? What was the same and what was different?
-	Since my technique was more mathematical this time, my pseudocode was very different. I approached this from a formulaic point of view, rather than creating an array and pushing numbers into it until they were larger than (or equal to) the given argument.
+Did an array or object make more sense to use and why?
+	I used an object since I could set each object property key to a grocery item and the value to its quantity. I think an array would have been a little more complicated.
 */
