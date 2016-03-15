@@ -8,7 +8,7 @@
 
 // Release 1:
 
-document.GetElementById("release-0").className = "done";
+	document.GetElementById("release-0").className = "done";
 
 // Release 2:
 
